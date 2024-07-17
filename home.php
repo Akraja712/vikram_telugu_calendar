@@ -27,7 +27,7 @@ include "header.php";
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Telugu Calendar - Dashboard</title>
+    <title>Vikram Telugu Calendar - Dashboard</title>
 </head>
 
 <body>
