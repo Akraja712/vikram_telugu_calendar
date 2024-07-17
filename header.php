@@ -177,91 +177,8 @@ $fn = new custom_functions;
                         <span>Panchangam</span>
                     </a>
                 </li>
-                <li class="treeview">
-                    <a href="month_panchangam.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Monthly Panchangam</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-calendar"></i>
-                        <span>Festivals</span>
-                        <i class="fa fa-angle-right pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        
-                          <li><a href="month_festivals.php"><i class="fa fa-angle-right"></i>Month Festivals</a></li>
-
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="holidays.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Holidays</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="important_days.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Important Days</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-calendar"></i>
-                        <span>Horoscope</span>
-                        <i class="fa fa-angle-right pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="daily.php"><i class="fa fa-angle-right"></i>Daily</a></li>
-                        <li><a href="weekly.php"><i class="fa fa-angle-right"></i>Weekly</a></li>
-                        <li><a href="monthly.php"><i class="fa fa-angle-right"></i>Monthly</a></li>
-                        <li><a href="yearly.php"><i class="fa fa-angle-right"></i>Yearly</a></li>
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="child_birth.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Child Birth Muhurtham</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="karthi_vrusti.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Karthi Vrusti</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="subha_muhurtham.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Subha Muhurthamulu</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="gowri.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Gowri Panchangam</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="horachakram.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Hora Chakram</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="bhargava_panchangam.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Bhargava Panchangam</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="abdhikam.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Abdhikam</span>
-                    </a>
-                </li>
+       
+              
                 <li class="treeview">
                     <a href="moudya_dhinam.php">
                         <i class="fa fa-calendar"></i>
@@ -280,12 +197,7 @@ $fn = new custom_functions;
                         <span>Nava Graha Pravesham</span>
                     </a>
                 </li>
-                <li class="treeview">
-                    <a href="rahu_yamagandam.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Rahu Yamagandam</span>
-                    </a>
-                </li> 
+              
                 </ul>
                 </li>
                 <li class="treeview">
@@ -362,12 +274,6 @@ $fn = new custom_functions;
                     </ul>
                 </li>
            
-                <li class="treeview">
-                    <a href="feedback.php">
-                        <i class="fa fa-bell"></i>
-                        <span>Feedback</span>
-                    </a>
-                </li>  
             </ul>
             </section>
             <!-- /.sidebar -->
