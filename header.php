@@ -113,7 +113,7 @@ $fn = new custom_functions;
                 </span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg">
-                    <h3>Telugu Calendar</h3>
+                    <h3>Vikram Telugu Calendar</h3>
                 </span>
             </a>
             <!-- Header Navbar: style can be found in header.less -->
