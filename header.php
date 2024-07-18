@@ -165,13 +165,6 @@ $fn = new custom_functions;
                     </a>
                 </li>
                 <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-calendar"></i>
-                        <span>Main Panchangam Menu</span>
-                        <i class="fa fa-angle-right pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                <li class="treeview">
                     <a href="panchangam.php">
                         <i class="fa fa-calendar"></i>
                         <span>Panchangam</span>
@@ -197,35 +190,12 @@ $fn = new custom_functions;
                         <span>Nava Graha Pravesham</span>
                     </a>
                 </li>
-              
-                </ul>
-                </li>
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa fa-calendar"></i>
-                        <span>Audio's & Live</span>
-                        <i class="fa fa-angle-right pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                <li class="treeview">
-                    <a href="audio.php">
-                        <i class="fa fa-headphones"></i>
-                        <span>Audio</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="other_music.php">
-                        <i class="fa fa-music"></i>
-                        <span>Other Music</span>
-                    </a>
-                </li>
+          
                 <li class="treeview">
                     <a href="video.php">
                         <i class="fa fa-play"></i>
                         <span>Video</span>
                     </a>
-                </li>
-                </ul>
                 </li>
                 <li class="treeview">
                     <a href="#">
