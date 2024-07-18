@@ -1710,7 +1710,7 @@ if (isset($_GET['table']) && $_GET['table'] == 'other_music') {
 }
 
 //video table goes here
-if (isset($_GET['table']) && $_GET['table'] == 'video') {
+if (isset($_GET['table']) && $_GET['table'] == 'live_darshanam') {
 
     $offset = 0;
     $limit = 10;
@@ -1736,13 +1736,13 @@ if (isset($_GET['table']) && $_GET['table'] == 'video') {
     if (isset($_GET['order'])){
         $order = $db->escapeString($_GET['order']);
     }
-    $sql = "SELECT COUNT(`id`) as total FROM `video` ";
+    $sql = "SELECT COUNT(`id`) as total FROM `live_darshanam` ";
     $db->sql($sql);
     $res = $db->getResult();
     foreach ($res as $row)
         $total = $row['total'];
    
-    $sql = "SELECT * FROM video " . $where . " ORDER BY " . $sort . " " . $order . " LIMIT " . $offset . ", " . $limit;
+    $sql = "SELECT * FROM live_darshanam " . $where . " ORDER BY " . $sort . " " . $order . " LIMIT " . $offset . ", " . $limit;
     $db->sql($sql);
     $res = $db->getResult();
 
@@ -1755,8 +1755,8 @@ if (isset($_GET['table']) && $_GET['table'] == 'video') {
     foreach ($res as $row) {
 
         
-        $operate = ' <a href="edit-video.php?id=' . $row['id'] . '"><i class="fa fa-edit"></i>Edit</a>';
-        $operate .= ' <a class="text text-danger" href="delete-video.php?id=' . $row['id'] . '"><i class="fa fa-trash"></i>Delete</a>';
+        $operate = ' <a href="edit-live_darshanam.php?id=' . $row['id'] . '"><i class="fa fa-edit"></i>Edit</a>';
+        $operate .= ' <a class="text text-danger" href="delete-live_darshanam.php?id=' . $row['id'] . '"><i class="fa fa-trash"></i>Delete</a>';
         $tempRow['id'] = $row['id'];
         $tempRow['title'] = $row['title'];
         $tempRow['link'] = $row['link'];

@@ -17,13 +17,13 @@ if (isset($_POST['btnUpdate'])) {
     $title = $db->escapeString($fn->xss_clean($_POST['title']));
     $link = $db->escapeString($fn->xss_clean($_POST['link']));
 
-    $sql = "UPDATE video SET title='$title',link='$link' WHERE id = '$ID'";
+    $sql = "UPDATE live_darshanam SET title='$title',link='$link' WHERE id = '$ID'";
     $db->sql($sql);
     $categories_result = $db->getResult();
     if (!empty($categories_result)) {
         $error['add_menu'] = " <span class='label label-danger'>Failed</span>";
     } else {
-        $error['add_menu'] = " <span class='label label-success'>Video Updated Successfully</span>";
+        $error['add_menu'] = " <span class='label label-success'>Live Darshanam Updated Successfully</span>";
     }
     if (isset($_FILES['image']['size']) && $_FILES['image']['size'] != 0 && $_FILES['image']['error'] == 0 && !empty($_FILES['image'])) {
         // The "image" file is not empty, and there is no error in the file upload
@@ -51,7 +51,7 @@ if (isset($_POST['btnUpdate'])) {
         }
     
         $upload_image = 'upload/images/' . $filename;
-        $sql = "UPDATE video SET `image`='$upload_image' WHERE `id`='$ID'";
+        $sql = "UPDATE live_darshanam SET `image`='$upload_image' WHERE `id`='$ID'";
         $db->sql($sql);
     
         $update_result = $db->getResult();
@@ -62,7 +62,7 @@ if (isset($_POST['btnUpdate'])) {
         }
     
         if ($update_result == 1) {
-            $error['update_menu'] = " <section class='content-header'><span class='label label-success'>video updated Successfully</span></section>";
+            $error['update_menu'] = " <section class='content-header'><span class='label label-success'>Live Darshanam updated Successfully</span></section>";
         } else {
             $error['update_menu'] = " <span class='label label-danger'>Failed to update</span>";
         }
@@ -71,7 +71,7 @@ if (isset($_POST['btnUpdate'])) {
 
 $data = array();
 
-$sql_query = "SELECT * FROM `video` WHERE id = '$ID'";
+$sql_query = "SELECT * FROM `live_darshanam` WHERE id = '$ID'";
 $db->sql($sql_query);
 $res = $db->getResult();
 foreach ($res as $row)
@@ -79,7 +79,7 @@ $data = $row;
 
 ?>
 <section class="content-header">
-<h1>Edit video <small><a href='video.php'> <i class='fa fa-angle-double-left'></i>&nbsp;&nbsp;&nbsp;Back to video</a></small></h1>
+<h1>Edit Live Darshanam <small><a href='live_darshanam.php'> <i class='fa fa-angle-double-left'></i>&nbsp;&nbsp;&nbsp;Back to Live Darshanam</a></small></h1>
     <?php echo isset($error['add_menu']) ? $error['add_menu'] : ''; ?>
     <ol class="breadcrumb">
         <li><a href="home.php"><i class="fa fa-home"></i> Home</a></li>

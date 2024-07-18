@@ -24,12 +24,12 @@
 <?php include "header.php";?>
 <html>
 <head>
-<title>Edit Video | - Dashboard</title>
+<title>Edit Live Darshanam | - Dashboard</title>
 </head>
 </body>
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
-        <?php include('public/edit-video-form.php'); ?>
+        <?php include('public/edit-live_darshanam-form.php'); ?>
       </div><!-- /.content-wrapper -->
   </body>
 </html>

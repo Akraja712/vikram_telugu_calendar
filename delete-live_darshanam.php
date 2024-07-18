@@ -12,8 +12,8 @@ $db->connect();
 	}
 	$data = array();
 
-	$sql_query = "DELETE  FROM video WHERE id =" . $ID;
+	$sql_query = "DELETE  FROM live_darshanam WHERE id =" . $ID;
 	$db->sql($sql_query);
 	$res = $db->getResult();
-	header("location:video.php");
+	header("location:live_darshanam.php");
 ?>

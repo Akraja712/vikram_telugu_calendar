@@ -192,9 +192,9 @@ $fn = new custom_functions;
                 </li>
           
                 <li class="treeview">
-                    <a href="video.php">
+                    <a href="live_darshanam.php">
                         <i class="fa fa-play"></i>
-                        <span>Video</span>
+                        <span>Live Darshanam</span>
                     </a>
                 </li>
                 <li class="treeview">

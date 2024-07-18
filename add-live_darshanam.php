@@ -25,13 +25,13 @@
 <?php include "header.php";?>
 <html>
 <head>
-<title>Add Video | - Dashboard</title>
+<title>Add Live Darshanam | - Dashboard</title>
 </head>
 </body>
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
 		<?php
-			include('public/add-video-form.php'); 
+			include('public/add-live_darshanam-form.php'); 
 		?>
       </div><!-- /.content-wrapper -->
   </body>

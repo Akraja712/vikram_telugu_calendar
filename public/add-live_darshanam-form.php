@@ -34,11 +34,11 @@ if (isset($_POST['btnAdd'])) {
         }
 
         $upload_image = 'upload/images/' . $filename;
-        $sql = "INSERT INTO video (title,link, image) VALUES ('$title','$link', '$upload_image')";
+        $sql = "INSERT INTO live_darshanam (title,link, image) VALUES ('$title','$link', '$upload_image')";
         $db->sql($sql);
     } else {
         // Image is not uploaded or empty, insert only the title
-        $sql = "INSERT INTO video (title,link) VALUES ('$title','$link')";
+        $sql = "INSERT INTO live_darshanam (title,link) VALUES ('$title','$link')";
         $db->sql($sql);
     }
     $result = $db->getResult();
@@ -50,14 +50,14 @@ if (isset($_POST['btnAdd'])) {
 
     if ($result == 1) {
         $error['add_video'] = "<section class='content-header'>
-                                            <span class='label label-success'>video Added Successfully</span> </section>";
+                                            <span class='label label-success'>Live Darshanam Added Successfully</span> </section>";
     } else {
         $error['add_video'] = " <span class='label label-danger'>Failed</span>";
     }
 }
 ?>
 <section class="content-header">
-    <h1>Add Video <small><a href='video.php'> <i class='fa fa-angle-double-left'></i>&nbsp;&nbsp;&nbsp;Back to Video</a></small></h1>
+    <h1>Add Live Darshanam <small><a href='live_darshanam.php'> <i class='fa fa-angle-double-left'></i>&nbsp;&nbsp;&nbsp;Back to Live Darshanam</a></small></h1>
 
     <?php echo isset($error['add_video']) ? $error['add_video'] : ''; ?>
     <ol class="breadcrumb">
