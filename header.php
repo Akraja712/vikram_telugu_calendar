@@ -216,40 +216,6 @@ $fn = new custom_functions;
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-calendar"></i>
-                        <span>Bakthini Chatudham</span>
-                        <i class="fa fa-angle-right pull-right"></i>
-                    </a>
-                    <ul class="treeview-menu">
-                <li class="treeview">
-                    <a href="image-category.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Image Category</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="images.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Images</span>
-                    </a>
-                </li>
-                <li class="treeview">
-                    <a href="video-category.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Video Category</span>
-                    </a>
-                </li>   
-                <li class="treeview">
-                    <a href="video-post.php">
-                        <i class="fa fa-calendar"></i>
-                        <span>Video Post</span>
-                    </a>
-                </li> 
-                </ul>
-                </li>
-              
-                <li class="treeview">
-                    <a href="#">
                     <i class="fa fa-newspaper-o"></i>
                         <span> Temples & Festivals info</span>
                         <i class="fa fa-angle-right pull-right"></i>
