@@ -21,39 +21,6 @@ $week_end->modify('+6 days'); // Set to the end of the current week
 $from_date = $week_start->format('Y-m-d'); 
 $to_date = $week_end->format('Y-m-d');
 
-if ($_POST['type'] == 'Daily'){
-    $date = date('Y-m-d');
-    $rasi = $db->escapeString($_POST['rasi']);
-    $sql = "SELECT * FROM `daily_horoscope` WHERE date = '$date' AND rasi = '$rasi'";
-    $db->sql($sql);
-    $res = $db->getResult();
-    $num = $db->numRows($res);
-    if($num>=1){
-        $response['success'] = true;
-        $response['message'] = "Daily List Successfullty";
-        $response['data'] = $res;
-        print_r(json_encode($response));
-
-    }
-
-}
-if ($_POST['type'] == 'Weekly'){
-    $year = date('Y');
-    $rasi = $db->escapeString($_POST['rasi']);
-    $sql = "SELECT * FROM `weekly_horoscope` WHERE year = '$year' AND rasi = '$rasi' AND STR_TO_DATE(SUBSTRING_INDEX(week, '_', 1), '%b-%d,%Y') >= '$from_date'
-    AND STR_TO_DATE(SUBSTRING_INDEX(week, '_', -1), '%b-%d,%Y') <= '$to_date'";
-    $db->sql($sql);
-    $res = $db->getResult();
-    $num = $db->numRows($res);
-    if($num>=1){
-        $response['success'] = true;
-        $response['message'] = "Weekly List Successfullty";
-        $response['data'] = $res;
-        print_r(json_encode($response));
-
-    }
-
-}
 if ($_POST['type'] == 'Monthly'){
     $year = date('Y');
     $month = date('F');
