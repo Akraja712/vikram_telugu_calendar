@@ -26,7 +26,6 @@
                                     <th data-field="name" data-sortable="true">Nava Graham</th>
                                     <th  data-field="title" data-sortable="true">Title</th>
                                     <th  data-field="description" data-sortable="true">Description</th>
-                                    <th data-field="year" data-sortable="true">Year</th>
                                     <th  data-field="operate" data-events="actionEvents">Action</th>
                                 </tr>
                             </thead>

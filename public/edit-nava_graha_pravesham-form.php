@@ -19,13 +19,12 @@ if (isset($_POST['btnEdit'])) {
 	$title = $db->escapeString(($_POST['title']));
 	$name= $db->escapeString($_POST['name']);
 	$description= $db->escapeString($_POST['description']);
-	$year= $db->escapeString($_POST['year']);
 	$error = array();
    
    
 	if (!empty($title) && !empty($name) && !empty($description) ) {
 
-			$sql_query = "UPDATE nava_graha_pravesham SET title='$title',name='$name',description='$description',year='$year' WHERE id =$ID";
+			$sql_query = "UPDATE nava_graha_pravesham SET title='$title',name='$name',description='$description' WHERE id =$ID";
 			$db->sql($sql_query);
 			 $res = $db->getResult();
              $uptitle_result = $db->getResult();
@@ -86,20 +85,6 @@ if (isset($_POST['btnCancel'])) { ?>
 					<div class="box-body">
 				        	<div class="row">
                                 <div class="form-group">
-								<div class='col-md-6'>
-                                        <label for="">Year</label> <i class="text-danger asterik">*</i>
-                                        <select id='year' name="year" class='form-control' required>
-                                            <option value="">Select Year</option>
-                                                <?php
-                                                $sql = "SELECT * FROM `years`";
-                                                $db->sql($sql);
-                                                $result = $db->getResult();
-                                                foreach ($result as $value) {
-                                                ?>
-													 <option value='<?= $value['year'] ?>' <?= $value['year']==$res[0]['year'] ? 'selected="selected"' : '';?>><?= $value['year'] ?></option>
-                                            <?php } ?>
-                                        </select>
-                                    </div>
                                     <div class='col-md-6'>
                                         <label for="">Nava Graham</label> <i class="text-danger asterik">*</i>
                                         <select id='name' name="name" class='form-control' required>

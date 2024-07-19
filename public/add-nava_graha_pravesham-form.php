@@ -8,7 +8,6 @@ $fn = new custom_functions;
 <?php
 if (isset($_POST['btnAdd'])) {
     
-        $year = $db->escapeString(($_POST['year']));
         $title = $db->escapeString(($_POST['title']));
         $name= $db->escapeString($_POST['name']);
         $description= $db->escapeString($_POST['description']);
@@ -23,14 +22,12 @@ if (isset($_POST['btnAdd'])) {
         if (empty($description)) {
             $error['description'] = " <span class='label label-danger'>Required!</span>";
         }
-        if (empty($year)) {
-            $error['year'] = " <span class='label label-danger'>Required!</span>";
-        }
+        
    
        
-       if (!empty($title) && !empty($name) && !empty($description) && !empty($year)) {
+       if (!empty($title) && !empty($name) && !empty($description) ) {
          
-            $sql_query = "INSERT INTO nava_graha_pravesham (year,title,name,description)VALUES('$year','$title','$name','$description')";
+            $sql_query = "INSERT INTO nava_graha_pravesham (title,name,description)VALUES('$title','$name','$description')";
             $db->sql($sql_query);
             $result = $db->getResult();
             if (!empty($result)) {
@@ -71,20 +68,6 @@ if (isset($_POST['btnAdd'])) {
                 <form name="add_nava_graha_pravesham_form" method="post" enctype="multipart/form-data">
                     <div class="box-body">
                            <div class="row">
-                           <div class='col-md-6'>
-                                        <label for="">Year</label> <i class="text-danger asterik">*</i>
-                                        <select id='year' name="year" class='form-control' required>
-                                            <option value="">Select Year</option>
-                                                <?php
-                                                $sql = "SELECT * FROM `years`";
-                                                $db->sql($sql);
-                                                $result = $db->getResult();
-                                                foreach ($result as $value) {
-                                                ?>
-                                                    <option value='<?= $value['year'] ?>'><?= $value['year'] ?></option>
-                                            <?php } ?>
-                                        </select>
-                                    </div>
                                 <div class="form-group">
                                     <div class='col-md-6'>
                                         <label for="">Nava Graham</label> <i class="text-danger asterik">*</i>

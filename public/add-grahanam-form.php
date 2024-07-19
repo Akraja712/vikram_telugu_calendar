@@ -8,7 +8,6 @@ $fn = new custom_functions;
 <?php
 if (isset($_POST['btnAdd'])) {
 
-        $year= $db->escapeString($_POST['year']);
         $description= $db->escapeString($_POST['description']);
         $title= $db->escapeString($_POST['title']);
         $error = array();
@@ -19,15 +18,13 @@ if (isset($_POST['btnAdd'])) {
         if (empty($title)) {
             $error['title'] = " <span class='label label-danger'>Required!</span>";
         }
-        if (empty($year)) {
-            $error['year'] = " <span class='label label-danger'>Required!</span>";
-        }
+     
        
        
        
-       if (!empty($description) && !empty($title) && !empty($years)) {
+       if (!empty($description) && !empty($title) ) {
          
-            $sql_query = "INSERT INTO grahanam (year,title,description)VALUES('$year','$title','$description')";
+            $sql_query = "INSERT INTO grahanam (title,description)VALUES('$title','$description')";
             $db->sql($sql_query);
             $result = $db->getResult();
             if (!empty($result)) {
@@ -69,20 +66,6 @@ if (isset($_POST['btnAdd'])) {
                 <form name="add_grahanam_form" method="post" enctype="multipart/form-data">
                     <div class="box-body">
                         <div class="row">
-                        <div class='col-md-6'>
-                                        <label for="">Year</label> <i class="text-danger asterik">*</i>
-                                        <select id='year' name="year" class='form-control' required>
-                                            <option value="">Select Year</option>
-                                                <?php
-                                                $sql = "SELECT * FROM `years`";
-                                                $db->sql($sql);
-                                                $result = $db->getResult();
-                                                foreach ($result as $value) {
-                                                ?>
-                                                    <option value='<?= $value['year'] ?>'><?= $value['year'] ?></option>
-                                            <?php } ?>
-                                        </select>
-                                    </div>
                             <div class='col-md-6'>
                                     <label for="exampleInputEmail1">Title</label> <i class="text-danger asterik">*</i><?php echo isset($error['title']) ? $error['title'] : ''; ?>
                                     <input type="text" class="form-control" name="title" required>
