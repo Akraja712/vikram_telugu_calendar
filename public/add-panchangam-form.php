@@ -238,20 +238,20 @@ if (isset($_POST['btnAdd'])) {
                             <div class="row">
                                 <div class="form-group">
                                 <div class="col-md-3">
+                                            <label for="exampleInputEmail1">Rahukalam</label> <i class="text-danger asterik">*</i><?php echo isset($error['rahukalam']) ? $error['rahukalam'] : ''; ?>
+                                            <input type="text" class="form-control" name="rahukalam">
+                                    </div>
+                                <div class="col-md-3">
                                             <label for="exampleInputEmail1">Yamakandam</label> <i class="text-danger asterik">*</i><?php echo isset($error['yamakandam']) ? $error['yamakandam'] : ''; ?>
                                             <input type="text" class="form-control" name="yamakandam">
-                                    </div>
-                                    <div class="col-md-3">
-                                            <label for="exampleInputEmail1"> Dhurmuhurtham</label> <i class="text-danger asterik">*</i><?php echo isset($error['dhurmuhurtham']) ? $error['dhurmuhurtham'] : ''; ?>
-                                            <input type="text" class="form-control" name="dhurmuhurtham">
                                     </div>
                                     <div class="col-md-3">
                                             <label for="exampleInputEmail1">Varjyam</label> <i class="text-danger asterik">*</i><?php echo isset($error['varjyam']) ? $error['varjyam'] : ''; ?>
                                             <input type="text" class="form-control" name="varjyam">
                                     </div>
                                     <div class="col-md-3">
-                                            <label for="exampleInputEmail1">Rahukalam</label> <i class="text-danger asterik">*</i><?php echo isset($error['rahukalam']) ? $error['rahukalam'] : ''; ?>
-                                            <input type="text" class="form-control" name="rahukalam">
+                                            <label for="exampleInputEmail1"> Dhurmuhurtham</label> <i class="text-danger asterik">*</i><?php echo isset($error['dhurmuhurtham']) ? $error['dhurmuhurtham'] : ''; ?>
+                                            <input type="text" class="form-control" name="dhurmuhurtham">
                                     </div>
                                  </div>
                             </div>

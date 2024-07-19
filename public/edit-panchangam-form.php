@@ -198,20 +198,20 @@ if (isset($_POST['btnCancel'])) { ?>
                             <div class="row">
                                 <div class="form-group">
 								<div class="col-md-3">
+                                            <label for="exampleInputEmail1">Rahukalam</label> <i class="text-danger asterik">*</i>
+                                            <input type="text" class="form-control" name="rahukalam" value="<?php echo $res[0]['rahukalam']; ?>">
+                                    </div>
+								<div class="col-md-3">
                                             <label for="exampleInputEmail1">Yamagandam</label> <i class="text-danger asterik">*</i>
                                             <input type="text" class="form-control" name="yamakandam" value="<?php echo $res[0]['yamakandam']; ?>">
                                     </div>
-                                    <div class="col-md-3">
-                                            <label for="exampleInputEmail1"> Dhurmuhurtham</label> <i class="text-danger asterik">*</i>
-                                            <input type="text" class="form-control" name="dhurmuhurtham" value="<?php echo $res[0]['dhurmuhurtham']; ?>">
-                                    </div>
-                                    <div class="col-md-3">
+									<div class="col-md-3">
                                             <label for="exampleInputEmail1">Varjyam</label> <i class="text-danger asterik">*</i>
                                             <input type="text" class="form-control" name="varjyam" value="<?php echo $res[0]['varjyam']; ?>">
                                     </div>
                                     <div class="col-md-3">
-                                            <label for="exampleInputEmail1">Rahukalam</label> <i class="text-danger asterik">*</i>
-                                            <input type="text" class="form-control" name="rahukalam" value="<?php echo $res[0]['rahukalam']; ?>">
+                                            <label for="exampleInputEmail1"> Dhurmuhurtham</label> <i class="text-danger asterik">*</i>
+                                            <input type="text" class="form-control" name="dhurmuhurtham" value="<?php echo $res[0]['dhurmuhurtham']; ?>">
                                     </div>
                                  </div>
                             </div>
