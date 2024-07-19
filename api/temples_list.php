@@ -12,7 +12,7 @@ include_once('../includes/crud.php');
 $db = new Database();
 $db->connect();
 
-$sql = "SELECT * FROM `old_articles`";
+$sql = "SELECT * FROM `neti_articles`";
 $db->sql($sql);
 $res = $db->getResult();
 $num = $db->numRows($res);
@@ -27,7 +27,7 @@ if ($num >= 1) {
         $rows[] = $temp;
     }
     $response['success'] = true;
-    $response['message'] = "Festivals Listed Successfully";
+    $response['message'] = "Temple Listed Successfully";
     $response['data'] = $rows;
     print_r(json_encode($response));
 } else {
