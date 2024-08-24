@@ -8,7 +8,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 date_default_timezone_set('Asia/Kolkata');
 
-include_once('/includes/crud.php');
+include_once('../includes/crud.php');
 $db = new Database();
 $db->connect();
 
@@ -23,6 +23,7 @@ $to_date = $week_end->format('Y-m-d');
 
 if ($_POST['type'] == 'Monthly'){
     $year = date('Y');
+    $month = date('F');
     $rasi = $db->escapeString($_POST['rasi']);
     $sql = "SELECT * FROM `monthly_horoscope` WHERE year = '$year' AND month = '$month' AND rasi = '$rasi'";
     $db->sql($sql);
